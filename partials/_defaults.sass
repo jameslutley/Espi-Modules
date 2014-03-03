@@ -1,0 +1,76 @@
+//////////////////////////
+$border__hr: 1px !default
+$border__table: 1px !default
+$padding__table: .5em !default
+//////////////////////////
+a
+  text-decoration: none
+  position: relative    
+  &:active
+    top: 1px 
+
+blockquote, ul, ol, dl, fieldset  
+  > :last-child
+    @extend %0-m-bottom  
+
+table
+  width: 100%
+
+caption, th, td
+  text-align: left
+
+td
+  vertical-align: top
+
+th, td
+  padding: $padding__table
+  .table--bordered &
+    border-width: $border__table
+    border-style: solid
+
+th, dt
+  @extend %bold
+
+img, audio, canvas, embed, object, video 
+  display: block
+  max-width: 100%
+
+img  
+  @extend %italic
+  color: #666
+  &[width]
+    width: auto !important
+  &[height]
+    height: auto !important
+  iframe[src*="maps.google"] &
+    max-width: auto
+    margin: auto
+
+iframe
+  display: block
+
+abbr[title]
+  border-bottom: none
+
+address
+  display: block
+  font-style: normal
+  white-space: pre-line
+
+ins
+  @extend %bold
+  text-decoration: none
+
+mark
+  @extend %italic
+  @extend %bold
+
+pre
+  overflow-x: auto
+
+hr,
+.hr
+  clear: both
+  border: none
+  border-top-width: $border__hr
+  border-top-style: solid        

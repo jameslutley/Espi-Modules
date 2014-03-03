@@ -1,8 +1,12 @@
 {
     "name": "espi-modules",
-    "version": "0.0.2",
+    "version": "1.0.0",
     "author": "Edenspiekermann_",
     "ignore": [
-      "README.md"
+      "README.md",
+      "bower.json",
+      "package.json",
+      ".gitignore",
+      ".bowerrc"
     ]
 }

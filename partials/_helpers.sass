@@ -1,0 +1,110 @@
+// Layout
+*
+  &,
+  &:before,
+  &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizng: border-box
+    box-sizing: border-box  
+
+%content-box
+  -webkit-box-sizing: content-box
+  -moz-box-sizng: content-box
+  box-sizing: content-box  
+
+.fl,
+%fl
+  float: left
+
+.fr,
+%fr
+  float: right    
+
+.clear,
+%clear
+  clear: both
+
+.centered,
+%centered
+  margin-left: auto
+  margin-right: auto
+
+.relative,
+%relative
+  position: relative  
+
+.group,
+%group
+  overflow: hidden
+
+.cover,
+%cover
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+.cf,
+%cf
+  *zoom: 1
+
+  &:after,
+  &:before
+    content: " "
+    display: table
+
+  &:after
+    clear: both 
+
+// Typography
+%bold
+  font-weight: bold
+
+%italic
+  font-style: italic
+
+%uppercase
+  text-transform: uppercase    
+
+%lowercase
+  text-transform: lowercase  
+
+%text-center
+  text-align: center
+
+%unset-list
+  +unset-list
+
+// Margins
+%0-m
+  margin: 0
+
+%0-p
+  padding: 0
+
+%0-m-bottom
+  margin-bottom: 0
+
+%0-m-top
+  margin-top: 0
+
+%0-p-bottom
+  padding-bottom: 0
+
+%0-p-top
+  padding-top: 0
+
+// Aesthetic
+.rounded,
+%rounded
+  // massive radius to ensure circle
+  border-radius: em(10000px)
+
+.ir,
+%ir
+  +ir
+
+.is-hidden,
+%is-hidden
+  +hide

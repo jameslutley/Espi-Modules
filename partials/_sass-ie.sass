@@ -1,0 +1,63 @@
+$fix-mqs: false !default
+$old-ie: false !default
+$old-ie-height: 700 !default
+
+=old-ie
+  @if $old-ie
+    @content
+
+=mq-min($width)
+  @if $fix-mqs
+    @if $fix-mqs >= $width
+      @content
+  @else
+    @media (min-width: em($width))
+      @content
+
+=mq-max($width)
+  @if $fix-mqs
+    @if $fix-mqs < $width
+      @content
+  @else
+    @media (max-width: em(($width - 1)))
+      @content
+
+=mq-min-max($min-width, $max-width)
+  @if $fix-mqs
+    @if $fix-mqs >= $min-width or $fix-mqs < $max-width
+      @content
+  @else
+    @media (min-width: em($min-width)) and (max-width: em(($max-width - 1)))
+      @content
+
+=mq-min-h($height)
+  @if $fix-mqs
+    @if $height < $old-ie-height
+      @content
+  @else
+    @media (min-height: em($height))
+      @content
+
+=mq-max-h($height)
+  @if $fix-mqs
+    @if $height >= $old-ie-height
+      @content
+  @else
+    @media (max-height: em(($height - 1)))
+      @content
+
+=mq-min-w-min-h($width, $height)
+  @if $fix-mqs
+    @if $fix-mqs >= $width and $height < $old-ie-height
+      @content
+  @else
+    @media (min-width: em($width)) and (min-height: em($height))
+      @content
+
+=mq-min-w-max-h($width, $height)
+  @if $fix-mqs
+    @if $fix-mqs < $width and $height >= $old-ie-height
+      @content
+  @else
+    @media (min-width: em($width)) and (max-height: em($height))
+      @content 

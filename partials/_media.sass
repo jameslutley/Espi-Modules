@@ -1,0 +1,24 @@
+//////////////////////////
+$gutter__media: 2em !default
+//////////////////////////
+.media
+  @extend .cf
+
+  &__aside
+    @extend %fl
+    margin-right: $gutter__media
+    .media--switch &
+      @extend %fr
+      margin-right: 0
+      margin-left: $gutter__media
+
+  &__body
+    @extend %group 
+    \:last-child
+      margin-bottom: 0
+    .media--overflow &
+      overflow: visible
+      display: table-cell
+      width: 10000px
+      *width: auto
+      *zoom: 1     

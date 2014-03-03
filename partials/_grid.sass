@@ -7,38 +7,38 @@ $gutter__grid: 2em !default
   margin-left: 0
   list-style: none
 
-  &--gutter 
-    margin-left: -$gutter__grid
+.grid--gutter 
+  margin-left: -$gutter__grid
 
-  &--gutter-large 
-    margin-left: -($gutter__grid * 2)
+.grid--gutter-large 
+  margin-left: -($gutter__grid * 2)
 
-  &--centered
-    text-align: center
+.grid--centered
+  text-align: center
 
-  &--vcentered
-    vertical-align: middle
+.grid--vcentered
+  vertical-align: middle
 
-  &__unit
-    @extend %fl
-    display: block
-    width: 100%
+.grid__unit
+  @extend %fl
+  display: block
+  width: 100%
 
-    .grid--switch &
-      @extend %fr
+  .grid--switch &
+    @extend %fr
 
-    .grid--gutter &
-      padding-left: $gutter__grid
+  .grid--gutter &
+    padding-left: $gutter__grid
 
-    .grid--gutter-large  &
-      padding-left: ($gutter__grid * 2)
+  .grid--gutter-large  &
+    padding-left: ($gutter__grid * 2)
 
-    .grid--inline &
-      @extend %inline-block
-      float: none
-      vertical-align: top
+  .grid--inline &
+    @extend %inline-block
+    float: none
+    vertical-align: top
 
-    .grid--centered &
-      text-align: left
-      [dir="rtl"] &
-        text-align: right   
+  .grid--centered &
+    text-align: left
+    [dir="rtl"] &
+      text-align: right   

@@ -8,18 +8,18 @@
     > a
       @extend %block
 
-  &--inline
-    > li
-      float: none
-      &,
-      > a
-        @extend %inline-block
+.nav--inline
+  > li
+    float: none
+    &,
+    > a
+      @extend %inline-block
 
-  &--centered
-    @extend %text-center
+.nav--centered
+  @extend %text-center
 
-  &--stacked
-    > li
-      display: list-item
-      > a
-        @extend %block
+.nav--stacked
+  > li
+    display: list-item
+    > a
+      @extend %block

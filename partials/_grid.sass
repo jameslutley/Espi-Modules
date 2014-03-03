@@ -3,8 +3,8 @@ $gutter__grid: 2em !default
 //////////////////////////
 .grid 
   @extend %cf
+  @extend %m-0-bottom
   margin-left: 0
-  margin-bottom: 0
   list-style: none
 
   &--gutter 
@@ -34,8 +34,8 @@ $gutter__grid: 2em !default
       padding-left: ($gutter__grid * 2)
 
     .grid--inline &
+      @extend %inline-block
       float: none
-      display: inline-block
       vertical-align: top
 
     .grid--centered &

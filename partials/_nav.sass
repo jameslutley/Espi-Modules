@@ -6,20 +6,20 @@
   > li
     float: left
     > a
-      display: block
+      @extend %block
 
   &--inline
     > li
       float: none
       &,
       > a
-        display: inline-block
+        @extend %inline-block
 
   &--centered
-    text-align: center
+    @extend %text-center
 
   &--stacked
     > li
       display: list-item
       > a
-        display: block  
+        @extend %block

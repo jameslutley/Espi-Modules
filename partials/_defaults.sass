@@ -11,7 +11,7 @@ a
 
 blockquote, ul, ol, dl, fieldset  
   > :last-child
-    @extend %0-m-bottom  
+    @extend %m-0-bottom  
 
 table
   width: 100%
@@ -32,7 +32,7 @@ th, dt
   @extend %bold
 
 img, audio, canvas, embed, object, video 
-  display: block
+  @extend
   max-width: 100%
 
 img  
@@ -47,13 +47,13 @@ img
     margin: auto
 
 iframe
-  display: block
+  @extend %block
 
 abbr[title]
   border-bottom: none
 
 address
-  display: block
+  @extend
   font-style: normal
   white-space: pre-line
 

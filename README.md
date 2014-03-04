@@ -17,9 +17,9 @@ Then `@import` `espi-modules/espi-modules` from wherever your Bower components l
 
 ## Configuration
 
-The modules included should be fairly self explanatory, and can each be toggled by setting flags **above** your `@import`
+The modules included should be fairly self explanatory, and can each be toggled by setting flags to `false` **above** your `@import` to hide certain modules.
 
-Default are currently as follows:
+Default flags are currently set as follows:
 
     $include__defaults: true
     $include__forms: true

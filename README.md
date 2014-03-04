@@ -19,18 +19,18 @@ Then `@import` `espi-modules/espi-modules` from wherever your Bower components l
 
 The modules included should be fairly self explanatory, and can each be toggled by setting flags **above** your `@import`
 
-Flags are currently as follows:
+Default are currently as follows:
 
-    $include__defaults: true !default
-    $include__forms: true !default
-    $include__block: true !default
-    $include__container: true !default
-    $include__flag: true !default
-    $include__grid: true !default
-    $include__island: true !default
-    $include__media: true !default
-    $include__nav: true !default
-    $include__vcenter: true !default
+    $include__defaults: true
+    $include__forms: true
+    $include__block: true
+    $include__container: true
+    $include__flag: true
+    $include__grid: true
+    $include__island: true
+    $include__media: true
+    $include__nav: true
+    $include__vcenter: true
 
 Each partial in `/partials` also contains specific variables that can overwritten and customised for your needs (take a look yourself)
 
@@ -49,6 +49,10 @@ A mixin library for media queries is included in `/vendor/sass-ie` as outlined i
     +mq-min-w-max-h($width, $height)
 
 This builds on the stylesheet pattern in the [Middleman Startup](https://github.com/mattberridge/Middleman-Startup) framework.
+
+### Unit Conversion
+
+Includes Jakob-e's [Unit Conversion library](https://github.com/jakob-e/unitconversion/blob/master/UnitConversion.scss) which offers a stupid amount of Sass functions you may or may not find useful.
 
 ### Other Modules
 

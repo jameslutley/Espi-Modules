@@ -3,9 +3,10 @@ $container__min: 320px !default
 $container__max: 75em !default
 $gutter__container: 2em !default
 //////////////////////////
-.container
-  @extend %centered
-  min-width: $container__min
-  max-width: $container__max
-  padding-left: $gutter__container
-  padding-right: $gutter__container
+@if $include__container == true
+  .container
+    @extend %centered
+    min-width: $container__min
+    max-width: $container__max
+    padding-left: $gutter__container
+    padding-right: $gutter__container

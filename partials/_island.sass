@@ -1,14 +1,15 @@
 //////////////////////////
 $gutter__island: 1em !default
 //////////////////////////
-.island
-  padding: $gutter__island
+@if $include__island == true
+  .island
+    padding: $gutter__island
 
-  \:last-child
-    @extend %m-0-bottom
+    \:last-child
+      @extend %m-0-bottom
 
-.island--small
-  padding: ($gutter__island/2)
+  .island--small
+    padding: ($gutter__island/2)
 
-.island--large
-  padding: $gutter__island * 2
+  .island--large
+    padding: $gutter__island * 2

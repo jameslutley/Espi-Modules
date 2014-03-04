@@ -1,26 +1,27 @@
 //////////////////////////
 $gutter__flag: 2em !default
 //////////////////////////
-.flag
-  display: table
-  width: 100%
+@if $include__flag == true
+  .flag
+    display: table
+    width: 100%
 
-.flag__aside,
-.flag__body
-  display: table-cell
-  vertical-align: middle
-  .flag--top &
-    vertical-align: top
-  .flag--bottom &
-    vertical-align: bottom
+  .flag__aside,
+  .flag__body
+    display: table-cell
+    vertical-align: middle
+    .flag--top &
+      vertical-align: top
+    .flag--bottom &
+      vertical-align: bottom
 
-.flag__aside
-  .flag--spaced &
-    margin-right: $gutter__flag
-    &.flag--switch
-      margin-right: 0
-      margin-left: $gutter__flag
+  .flag__aside
+    .flag--spaced &
+      margin-right: $gutter__flag
+      &.flag--switch
+        margin-right: 0
+        margin-left: $gutter__flag
 
-.flag__body
-  // fill all remaining space
-  width: 100%
+  .flag__body
+    // fill all remaining space
+    width: 100%

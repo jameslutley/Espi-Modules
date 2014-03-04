@@ -1,17 +1,18 @@
-.vcenter
-  @extend %cover
+@if $include__vcenter == true
+  .vcenter
+    @extend %cover
 
-.vcenter__wrap
-  display: table
-  width: 100%
-  height: 100%
-  .vcenter--hcenter &
-    @extend %text-center
+  .vcenter__wrap
+    display: table
+    width: 100%
+    height: 100%
+    .vcenter--hcenter &
+      @extend %text-center
 
-.vcenter__inner 
-  display: table-cell
-  vertical-align: middle
-  .vcenter--bottom &
-    vertical-align: top  
-  .vcenter--bottom &
-    vertical-align: bottom
+  .vcenter__inner 
+    display: table-cell
+    vertical-align: middle
+    .vcenter--bottom &
+      vertical-align: top  
+    .vcenter--bottom &
+      vertical-align: bottom

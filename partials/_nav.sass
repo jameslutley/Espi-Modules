@@ -1,25 +1,26 @@
-.nav
-  @extend .cf
-  list-style: none
-  margin-left: 0
+@if $include__nav == true
+  .nav
+    @extend .cf
+    list-style: none
+    margin-left: 0
 
-  > li
-    float: left
-    > a
-      @extend %block
+    > li
+      float: left
+      > a
+        @extend %block
 
-.nav--inline
-  > li
-    float: none
-    &,
-    > a
-      @extend %inline-block
+  .nav--inline
+    > li
+      float: none
+      &,
+      > a
+        @extend %inline-block
 
-.nav--centered
-  @extend %text-center
+  .nav--centered
+    @extend %text-center
 
-.nav--stacked
-  > li
-    display: list-item
-    > a
-      @extend %block
+  .nav--stacked
+    > li
+      display: list-item
+      > a
+        @extend %block

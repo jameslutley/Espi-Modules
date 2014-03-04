@@ -1,0 +1,91 @@
+//////////////////////////
+$size__checkbox: 1em !default
+$padding__form-fields: .5em !default
+$padding__label: .25em !default
+$padding__legend: .5em !default
+$height__textarea: 100px !default
+//////////////////////////
+@if $include__forms == true
+  input,
+  textarea,
+  select
+    width: 100%
+    border-width: 1px
+    border-style: solid
+    padding: $padding__form-fields
+    outline: 0 !important
+
+  select
+    cursor: pointer
+
+  label
+    @extend %block
+    @extend %bold
+    cursor: pointer
+    padding-bottom: $padding__label
+
+  textarea
+    resize: vertical
+    min-height: $height__textarea
+
+  legend
+    @extend %bold
+    padding: $padding__legend
+    .lt-ie8 &
+      margin-left: -7px
+
+  fieldset
+    @extend %m-0
+    @extend %p-0
+    border: none
+
+  form
+    @extend %m-0
+    ol, ul
+      padding-left: 0 !important
+      list-style: none !important
+      margin-left: 0
+    li
+      margin-bottom: $margin__form-fields  
+    br
+      display: none  
+
+  input, button, .btn
+    line-height: normal
+
+  input[type=search],
+  input[type=submit]
+    -webkit-appearance: none
+    -webkit-border-radius: 0
+
+  button,
+  input[type=submit],
+  input[type=button],
+  input[type=reset],
+  input[type=file]
+    @extend %content-box
+    width: auto
+
+  input[type=file]
+    border: none
+    @extend %p-0
+
+  input[type=checkbox],
+  input[type=radio]
+    vertical-align: baseline
+    background: none
+    border: none
+    height: $size__checkbox
+    width: $size__checkbox
+
+  .checkbox
+    @extend .relative
+    padding-left: $size__checkbox
+    label
+      @extend %p-0-bottom
+      font-weight: normal
+    input
+      position: absolute
+      left: 0
+      top: 50%
+      margin-top: -$size__checkbox/2            

@@ -40,6 +40,7 @@
 
 =unset-list
   margin-left: 0
+  margin-bottom: 0
   list-style: none
   li
     margin-bottom: 0
@@ -70,6 +71,37 @@
   .grid__unit
     padding-left: -$size
 
-// unsets here!
-// boost gutters
-// float clears for grid  
+=pseudo($where: before, $position: false, $ypos: top, $yposVal: 0, $xpos: left, $xposVal: 0, $margin-top: auto)
+  &:#{$where}
+    content: ""
+    display: block
+    @if $position
+      position: #{$position}
+      #{$xpos}: $xposVal
+      #{$ypos}: $yposVal
+      @if $margin-top != auto
+        margin-top: $margin-top
+
+=font-scale($sizes, $namespace: "copy", $micro_class: true)
+  @each $scale in $sizes
+    $current-breakpoint: nth($scale,1)
+    $current-font-size: nth($scale,2)
+    $base-size: $current-font-size !default  
+    @if $current-breakpoint > 0
+      +mq-min($current-breakpoint)
+        .#{$namespace}-size
+          font-size: $current-font-size
+        @if $micro_class == true  
+          // global micro copy
+          .#{$namespace}-size__fix-size
+            font-size: pct($base-size/$current-font-size)
+          // modifiers
+          @each $breakpoint in $sizes 
+            $this-breakpoint: nth($breakpoint,1)
+            $this-font-size: nth($breakpoint,2)
+            @if $this-breakpoint > 0 and $this-breakpoint < $current-breakpoint
+              .#{$namespace}-size__fix-size--#{$this-breakpoint}
+                font-size: pct($this-font-size/$current-font-size)
+    @else
+      .#{$namespace}-size
+        font-size: $current-font-size 

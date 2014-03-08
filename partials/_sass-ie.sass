@@ -1,6 +1,7 @@
 $fix-mqs: false !default
 $old-ie: false !default
 $old-ie-height: 700 !default
+$base-font: 16
 
 =old-ie
   @if $old-ie
@@ -11,7 +12,7 @@ $old-ie-height: 700 !default
     @if $fix-mqs >= $width
       @content
   @else
-    @media (min-width: em($width))
+    @media (min-width: em($width, $base-font))
       @content
 
 =mq-max($width)
@@ -19,7 +20,7 @@ $old-ie-height: 700 !default
     @if $fix-mqs < $width
       @content
   @else
-    @media (max-width: em(($width - 1)))
+    @media (max-width: em(($width - 1), $base-font))
       @content
 
 =mq-min-max($min-width, $max-width)
@@ -27,7 +28,7 @@ $old-ie-height: 700 !default
     @if $fix-mqs >= $min-width or $fix-mqs < $max-width
       @content
   @else
-    @media (min-width: em($min-width)) and (max-width: em(($max-width - 1)))
+    @media (min-width: em($min-width), $base-font) and (max-width: em(($max-width - 1), $base-font))
       @content
 
 =mq-min-h($height)
@@ -35,7 +36,7 @@ $old-ie-height: 700 !default
     @if $height < $old-ie-height
       @content
   @else
-    @media (min-height: em($height))
+    @media (min-height: em($height, $base-font))
       @content
 
 =mq-max-h($height)
@@ -43,7 +44,7 @@ $old-ie-height: 700 !default
     @if $height >= $old-ie-height
       @content
   @else
-    @media (max-height: em(($height - 1)))
+    @media (max-height: em(($height - 1), $base-font))
       @content
 
 =mq-min-w-min-h($width, $height)
@@ -51,7 +52,7 @@ $old-ie-height: 700 !default
     @if $fix-mqs >= $width and $height < $old-ie-height
       @content
   @else
-    @media (min-width: em($width)) and (min-height: em($height))
+    @media (min-width: em($width, $base-font)) and (min-height: em($height, $base-font))
       @content
 
 =mq-min-w-max-h($width, $height)
@@ -59,5 +60,5 @@ $old-ie-height: 700 !default
     @if $fix-mqs < $width and $height >= $old-ie-height
       @content
   @else
-    @media (min-width: em($width)) and (max-height: em($height))
+    @media (min-width: em($width, $base-font)) and (max-height: em($height, $base-font))
       @content 

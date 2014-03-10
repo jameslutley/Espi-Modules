@@ -1,7 +1,7 @@
 Edenspiekermann CSS Abstractions
 ============
 
-Current version: `1.1.0`
+Current version: `1.2.1`
 
 ## Installation
 

@@ -1,7 +1,7 @@
 {
     "name": "espi-modules",
     "repo": "mattberridge/Espi-Modules",
-    "version": "1.1.0",
+    "version": "1.2.1",
     "styles": ["_espi-modules.sass"],
     "author": "Edenspiekermann_",
     "license": "MIT"

@@ -3,7 +3,7 @@ $size__checkbox: 1em !default
 $padding__form-fields: .5em !default
 $padding__label: .25em !default
 $padding__legend: .5em !default
-$height__textarea: 100px !default
+$height__textarea: 150px !default
 //////////////////////////
 @if $include__forms == true
   input,
@@ -63,7 +63,6 @@ $height__textarea: 100px !default
   input[type=button],
   input[type=reset],
   input[type=file]
-    @extend %content-box
     width: auto
 
   input[type=file]
@@ -80,7 +79,7 @@ $height__textarea: 100px !default
 
   .checkbox
     @extend .relative
-    padding-left: $size__checkbox
+    padding-left: $size__checkbox * 1.25
     label
       @extend %p-0-bottom
       font-weight: normal

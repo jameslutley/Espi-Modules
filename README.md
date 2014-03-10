@@ -1,17 +1,13 @@
 Edenspiekermann CSS Abstractions
 ============
 
-Current version: `1.2.1`
+Current version: `1.2.2`
 
 ## Installation
 
 Core CSS abstractions for beginning any project. Use Bower to install using either:
 
 `$ bower install espi-modules --save`
-
-**or:**
-
-Update your `bower.json` dependencies with `"espi-modules": "1.1.0"` and run `$ bower update`
 
 Then `@import` `espi-modules/espi-modules` from wherever your Bower components live, at the top of your `.sass` structure.
 

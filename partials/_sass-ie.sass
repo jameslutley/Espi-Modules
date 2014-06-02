@@ -28,7 +28,7 @@ $mqs-base-font: 16
     @if $fix-mqs >= $min-width or $fix-mqs < $max-width
       @content
   @else
-    @media (min-width: em($min-width), $mqs-base-font) and (max-width: em(($max-width - 1), $mqs-base-font))
+    @media (min-width: em($min-width, $mqs-base-font)) and (max-width: em(($max-width - 1), $mqs-base-font))
       @content
 
 =mq-min-h($height)
